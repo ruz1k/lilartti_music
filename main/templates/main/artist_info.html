@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}{{ artists.title }}{% endblock %}
+
+<link rel="stylesheet" href="{% static 'main/artist.css' %}">
+{% block styles %}{% endblock %}
+
+{% block content %}
+<div class="info block container-fluid " style="background-image: url({{artists.background_image.url}});background-size: cover;">
+         <div class="row text-center justify-content-center">
+            <div class="col-xs-12">
+                <h1>{{ artists.title }}</h1>
+                {% if artists.title_image %}
+                <img src="{{artists.title_image.url}}">
+                {% else %}
+                <p></p>
+                {% endif %}
+                <p class="main">{{ artists.text|linebreaksbr }}</p>
+                <iframe width="50%" height="350" scrolling="no" frameborder="yes" allow="autoplay" src="{{ artists.link }}"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

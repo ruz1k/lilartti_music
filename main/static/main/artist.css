@@ -1,0 +1,47 @@
+.list {
+    margin:0 auto;
+    padding-top: 100px;
+}
+
+.list h1 a {
+    color:black;
+}
+
+.list img {
+    max-width: 100%;
+    width: 100%;
+    height: 450px;
+}
+
+.info {
+    margin: 0 auto;
+    color:white;
+    background-size: cover;
+}
+
+.info h1 {
+    padding-top: 100px;
+}
+
+.info p {
+    padding-bottom: 400px;
+    width:50%;
+    margin:0 auto;
+    font-size:17pt;
+    background-color: rgba(0,0,0,.7);
+}
+
+.info img {
+    float:left;
+    max-width:100%;
+    width:25%;
+    padding-left:20px;
+    padding-right: 20px;
+    height:450px;
+}
+
+@media only screen and (max-width: 967px) {   {background-image: url({{artists.image.url}})   } }
+
+@media screen and (min-width:300px) and (max-width:540px){
+    .info p {padding-bottom: 600px;}
+}

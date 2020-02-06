@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Artists{% endblock %}
+
+<link rel="stylesheet" href="{% static 'main/artist.css' %}">
+{% block styles %}{% endblock %}
+
+{% block content %}
+{% for artist in artists %}
+<div class="list block">
+    <div class="container-fluid">
+        <div class="row text-center justify-content-center">
+            <div class="col-xs-12">
+                {% if artist.title_image %}
+                <img src="{{artist.title_image.url}}">
+                {% else %}
+                <p></p>
+                {% endif %}
+                <h1><a href="{% url 'artist_info' pk=artist.pk %}">{{ artist.title }}</a></h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
