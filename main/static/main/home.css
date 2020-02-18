@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+body {
+    background-image: url("media/media/gif/carti.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home {
+    margin: 0 auto;
+    width: 100%;
+    padding-top:25%;
+    padding-bottom: 25%;
+    background-color: rgba(0,0,0,.7);
+}
+
+.home h1 { font-size: 45pt; color:white; font-family: 'Fredoka One', cursive;}
+.home p {font-size: 21pt; color: white;background-color: rgba(0,0,0,.7);width: 70%;margin: 0 auto;}
+
+@media screen and (min-width:300px) and (max-width:540px){
+    .home h1 {padding-top:200px;}
+    .home p {font-size: 15pt;width: 100%;font-weight: italic;}
+}

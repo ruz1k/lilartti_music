@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
 .nav-item {
     font-size: 25px;
     color:white;
@@ -5,8 +8,18 @@
     margin:0 auto;
     padding-top:20px;
     padding-bottom:20px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .navbar-brand {
-    font-size: 40px;
+    font-size: 35px;
+    color:white;
+    text-decoration: none;
+    font-family: 'Patua One', cursive;
 }
+
+.navbar-brand a {color: #000 !important; text-decoration: none;}
+
+.nav-item a {color:white;font-family: 'Oswald', sans-serif;}
+
+.navbar {background-color: black;}

@@ -19,9 +19,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'', include('main.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  url(r'^admin/', admin.site.urls),
+                  url(r'^artists', include('main.urls')),
+                  url(r'', include('home.urls')),
+                  url(r'^playlist', include('playlisty.urls')),
+                  url(r'^social', include('social.urls')),
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

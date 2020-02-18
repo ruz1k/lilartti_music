@@ -1,0 +1,9 @@
+.social {
+    margin: 0 auto;
+    background-color: rgba(0,0,0,.7);
+    padding-bottom: 450px;
+}
+
+.social h1 {padding-bottom: 50px; color: white; padding-top:250px;}
+.social h3 {padding-bottom: 40px;color: white}
+.social h3 a {color:white}

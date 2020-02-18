@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Playlist{% endblock %}
+
+<link rel="stylesheet" href="{% static 'main/playlist.css' %}">
+
+{% block styles %}{% endblock %}
+
+{% block content %}
+<div class="playlist block">
+    <div class="container-fluid">
+        <div class="row text-center white">
+            <div class="col-xs-12">
+                <h1>Playlist</h1>
+                <p>Music plays an integral part in my life.
+                    I do absolutely everything with music.  Music helps me in everything.
+                    I listen to different artists all day.  Music accompanies us throughout life.
+                    Music comes from open windows, sounds in transport, breaks out of the TV.
+                    Often, some melodies are associated in our mind with important events, sad or joyful.
+                    And music becomes a part of our soul, our whole being, capable of causing pain and happiness in us.
+                    In this playlist I collected my favorite songs.  Listen and you might like it too!</p>
+            </div>
+                <div class="col-xs-12 col-lg-6 col-md-6">
+                    <iframe src="https://open.spotify.com/embed/user/71jvb4bat8iajztfdf4tfvizy/playlist/61XIUA98pmvQ7bSLCh1Dd0"
+                            max-width="100%" height="550px" frameborder="0" allowtransparency="true" allow="encrypted-media">
+                    </iframe>
+                </div>
+               <div class="col-xs-12 col-lg-6 col-md-6">
+                   <iframe width="100%" height="450px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/813343662&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

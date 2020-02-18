@@ -10,11 +10,11 @@
 {% block content %}
 {% for artist in artists %}
 <div class="list block">
-    <div class="container-fluid">
+    <div class="container-fluid justify-content-center text-center">
         <div class="row text-center justify-content-center">
-            <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-lg-12 col-md-12 mx-auto">
                 {% if artist.title_image %}
-                <img src="{{artist.title_image.url}}">
+                <img src="{{artist.title_image.url}}" class="img-fluid">
                 {% else %}
                 <p></p>
                 {% endif %}
