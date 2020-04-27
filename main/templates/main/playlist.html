@@ -8,20 +8,26 @@
 {% block styles %}{% endblock %}
 
 {% block content %}
-{% for artist in artists %}
-<div class="list block">
-    <div class="container-fluid justify-content-center text-center">
-        <div class="row text-center justify-content-center">
-            <div class="col-xs-12 col-lg-12 col-md-12 mx-auto">
-                {% if artist.title_image %}
-                <img src="{{artist.title_image.url}}" class="img-fluid">
-                {% else %}
-                <p></p>
-                {% endif %}
-                <h1><a href="{% url 'artist_info' pk=artist.pk %}">{{ artist.title }}</a></h1>
+<div class="container-fluid p-4 text-center" style="margin-top:100px">
+      <div class="card-deck">
+        {% for artist in artists %}
+        <div class="col-lg-3 col-xs-12 col-md-12">
+        <div class="card" style="background-color:rgba(0,0,0,.5)">
+          <div class="card-img">
+            {% if artist.title_image %}
+            <img src="{{artist.title_image.url}}" class="card-img-top">
+            {% else %}
+            <p></p>
+            {% endif %}
+            <div class="card-body">
+              <h3 class="card-title" style="font-color:white"><a href="{% url 'artist_info' pk=artist.pk %}" style="font-color:white">{{ artist.title }}</a></h3>
+              <a href="{% url 'artist_info' pk=artist.pk %}" class="btn btn-success">Read</a>
             </div>
+          </div>
         </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-</div>
-{% endfor %}
+  </div>
 {% endblock %}
